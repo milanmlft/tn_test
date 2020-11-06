@@ -2,3 +2,4 @@ data/
 launch-docker.sh
 cache/
 truncated_normal/*
+.ipynb_checkpoints/
