@@ -1,6 +1,10 @@
 FROM heatonresearch/jupyter-python-r:latest
 
-# Install truncated_normal
+# Make RUN commands use the correct environment:
+SHELL ["conda", "run", "-n", "tensorflow", "/bin/bash", "-c"]
+
+# Install truncated_normal and dependencies
+RUN pip install scanpy
 RUN pip install truncated_normal
 
 # Make sure truncated_normal is installed
