@@ -4,7 +4,7 @@ FROM heatonresearch/jupyter-python-r:latest
 SHELL ["conda", "run", "-n", "tensorflow", "/bin/bash", "-c"]
 
 # Install truncated_normal and dependencies
-RUN pip install scanpy
+RUN pip install truncated_normal
 RUN pip install scanpy[leiden]
 RUN pip install louvain
 
