@@ -33,3 +33,23 @@ We also provide the following notebooks for reproducing results in the paper ([f
 
 ![method](method.png)
 
+
+## Docker container
+
+Build the Docker container locally with
+
+```
+docker build -t tn_test .
+```
+
+Run the container with
+
+```
+docker run -it --rm \
+    -p 8888:8888 \
+    -v ${PWD}:/root/mount/ \
+    tn_test:latest
+```
+
+which mounts the current working directory (`${PWD}`) in the container under `/root/mount/`.
+A Jupyter notebook instance can then be accessed by opening a browser at `http://localhost:8888/` and entering the token displayed in the terminal output.
