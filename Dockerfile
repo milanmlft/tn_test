@@ -6,6 +6,7 @@ SHELL ["conda", "run", "-n", "tensorflow", "/bin/bash", "-c"]
 # Install truncated_normal and dependencies
 RUN pip install scanpy
 RUN pip install scanpy[leiden]
+RUN pip install louvain
 
 # Make sure truncated_normal is installed
 RUN python -c "from truncated_normal import truncated_normal as tn"
